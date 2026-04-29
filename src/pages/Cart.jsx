@@ -291,6 +291,9 @@ export default function Cart() {
                       src="/Qr.jpg"
                       alt="UPI QR Code"
                       className="w-48 h-48 mx-auto rounded-lg shadow-sm"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                      }}
                     />
                     <p className="text-xs text-gray-500 mt-2">
                       After payment, click Place Order

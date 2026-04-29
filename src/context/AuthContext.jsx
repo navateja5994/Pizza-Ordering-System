@@ -112,6 +112,8 @@ export const AuthProvider = ({ children }) => {
   };
 
 
+  const isAdmin = userProfile?.role === "admin";
+  const isPendingAdmin = userProfile?.role === "pending_admin";
   const isRejectedAdmin = userProfile?.role === "rejected";
 
   const value = {

@@ -90,19 +90,14 @@ npm install
 ### 2. Configure Firebase
 
 1. Go to [Firebase Console](https://console.firebase.google.com/)
-2. Create a new project
+2. Create/use a **production Firebase project** (separate from dev)
 3. Enable **Authentication** (Email/Password provider)
-4. Create a **Cloud Firestore** database
-5. Copy your config and create a `.env` file:
+4. Create a **Cloud Firestore** database in production mode
+5. Copy your **production** config to `.env` (see `.env.example`)
+6. Add all `VITE_FIREBASE_*` env vars to your Vercel dashboard
 
-```env
-VITE_FIREBASE_API_KEY=your_api_key
-VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=your_project_id
-VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
-VITE_FIREBASE_MESSAGING_SENDER_ID=123456789
-VITE_FIREBASE_APP_ID=1:123456789:web:abcdef
-```
+**Copy from `.env.example` and fill in your production Firebase values.**
+
 
 ### 3. Setup EmailJS (Admin Approval Emails)
 
